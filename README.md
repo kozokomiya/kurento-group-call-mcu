@@ -49,7 +49,7 @@ Left side is pipeline structure of the original "kurento-group-call" application
 
 In this application, MCU connection is added on the top of SFU connection (orange part).  Composite video output stream will be displayed on the user browser as well as other user's.  Only video stream is connected to the browser in order to avoid audio howling.
 
-  
+<img width="1965" alt="groupcall_structure" src="https://user-images.githubusercontent.com/2987508/107467677-e2951c00-6ba9-11eb-9b40-1c502a48523d.png">  
 
 ## Issues
 
