@@ -69,6 +69,11 @@
 			<groupId>org.kurento</groupId>
 			<artifactId>kurento-utils-js</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.kurento.module</groupId>
+			<artifactId>custommixer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

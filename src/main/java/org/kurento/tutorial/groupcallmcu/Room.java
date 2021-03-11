@@ -27,7 +27,7 @@ import java.util.concurrent.ConcurrentMap;
 
 import javax.annotation.PreDestroy;
 
-import org.kurento.client.Composite;
+import org.kurento.module.custommixer.CustomMixer;
 import org.kurento.client.Continuation;
 import org.kurento.client.HubPort;
 import org.kurento.client.MediaPipeline;
@@ -49,7 +49,7 @@ public class Room implements Closeable {
 
   private final ConcurrentMap<String, UserSession> participants = new ConcurrentHashMap<>();
   private final MediaPipeline pipeline;
-  private final Composite mixer;
+  private final CustomMixer mixer;
   private final HubPort mixerOut;
   private final String name;
 
@@ -57,7 +57,7 @@ public class Room implements Closeable {
     return name;
   }
 
-  public Composite getMixer() {
+  public CustomMixer getMixer() {
     return mixer;
   }
 
@@ -72,7 +72,7 @@ public class Room implements Closeable {
   public Room(String roomName, MediaPipeline pipeline) {
     this.name = roomName;
     this.pipeline = pipeline;
-    this.mixer = new Composite.Builder(pipeline).build();
+    this.mixer = new CustomMixer.Builder(pipeline).build();
     this.mixerOut = new HubPort.Builder(this.mixer).build();
     log.info("ROOM {} has been created", roomName);
   }
